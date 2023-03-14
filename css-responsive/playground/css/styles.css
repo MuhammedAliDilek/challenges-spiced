@@ -95,13 +95,13 @@ h1 {
   width: 100%;
 }
 
-@media screen and(min-with: 600px) {
+@media screen and (min-width: 600px) {
   .box--two {
     width: 200px;
   }
 }
 
-@media screen and(min-with: 1200px) {
+@media screen and (min-width: 1200px) {
   .box--two {
     width: 400px;
   }
@@ -114,7 +114,7 @@ h1 {
   }
 }
 
-@media (prefers-colour-scheme: light) {
+@media (prefers-color-scheme: dark) {
   .box--four {
     background-color: purple;
   }
