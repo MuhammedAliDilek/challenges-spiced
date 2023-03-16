@@ -21,6 +21,10 @@ body {
   gap: 1rem;
   padding: 1rem;
   /* Add styles here */
+  grid-template-areas:
+    "a b c"
+    "d b e"
+    "d f e";
 }
 
 .image-board__image {
@@ -33,24 +37,36 @@ body {
 
 .image-board__image--1 {
   /* Add styles here */
+  grid-area: 1 / 1 / 2 / 2;
+  grid-area: a;
 }
 
 .image-board__image--2 {
   /* Add styles here */
+  /* grid-area: 1 / 2 / 3 / 3; another way to solve without grid-template-areas*/
+  grid-area: b;
 }
 
 .image-board__image--3 {
   /* Add styles here */
+  /* grid-area: 1 / 3 / 2 / 4; another way to solve without grid-template-areas*/
+  grid-area: c;
 }
 
 .image-board__image--4 {
   /* Add styles here */
+  /* grid-area: 2 / 1 / 4 / 2; another way to solve without grid-template-areas*/
+  grid-area: d;
 }
 
 .image-board__image--5 {
   /* Add styles here */
+  /* grid-area: 3 / 2 /4 /3; another way to solve without grid-template-areas*/
+  grid-area: f;
 }
 
 .image-board__image--6 {
   /* Add styles here */
+  /* grid-area: 2 / 3 / 4 /4; another way to solve without grid-template-areas*/
+  grid-area: e;
 }
