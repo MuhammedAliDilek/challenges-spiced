@@ -10,6 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const title = "Media Post";
+const text = "My Post";
+let likes = 5;
+const user = "me";
+const isReported = true; //A boolean is  a binary statement, can be true or false
 
 // --^-- write your code here --^--
 
@@ -18,5 +23,14 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(title);
+console.log(text);
+console.log(likes);
+console.log(user);
+console.log(isReported);
+
+likes++; //this add +1 value to likes
+
+console.log(likes);
 
 // --^-- write your code here --^--
