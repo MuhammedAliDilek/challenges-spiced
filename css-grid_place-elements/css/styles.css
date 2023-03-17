@@ -50,6 +50,7 @@ body {
   background-color: #3a67a4;
   /* Add styles here */
   grid-column: 5/-1; /*-1 start counting from the back. makes it easier to go untill the end */
+
 }
 
 .element-5 {
