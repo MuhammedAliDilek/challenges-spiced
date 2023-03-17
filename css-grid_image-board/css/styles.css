@@ -37,7 +37,7 @@ body {
 
 .image-board__image--1 {
   /* Add styles here */
-  grid-area: 1 / 1 / 2 / 2;
+  /* grid-area: 1 / 1 / 2 / 2; */
   grid-area: a;
 }
 
