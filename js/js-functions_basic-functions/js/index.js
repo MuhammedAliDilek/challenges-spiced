@@ -9,6 +9,13 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+//const BookData = [
+//{ title: "Ceza", author: "poor writer", rating: "4.0", sales: "5000" },];   couldn't make this work
+
+const title = "Suc";
+const author = "poor writer";
+let rating = 4;
+let sales = 5000;
 
 // --^-- write your code here --^--
 
@@ -25,6 +32,10 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+console.log(title, author, rating, sales);
+sales = 5500;
+rating = 4.2;
+console.log(title, author, rating, sales);
 
 // --^-- write your code here --^--
 
@@ -37,5 +48,10 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
-
+function logBookData() {
+  console.log(title, author, rating, sales);
+}
+sales = 5700;
+rating = 4.5;
+logBookData();
 // --^-- write your code here --^--
