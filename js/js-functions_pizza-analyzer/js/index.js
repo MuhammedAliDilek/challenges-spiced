@@ -14,7 +14,7 @@ let pizzaSize2 = 24;
 pizzaInput1.addEventListener("input", () => {
   // write your code here
   pizzaSize1 = pizzaInput1.value;
-  calculatePizzaGain = (pizzaSize1, pizzaSize2);
+  calculatePizzaGain(pizzaSize1, pizzaSize2);
 });
 
 pizzaInput2.addEventListener("input", () => {
@@ -34,7 +34,7 @@ function calculatePizzaGain(diameter1, diameter2) {
   output.innerHTML = textContent;
 }
 
-calculatePizzaGain(24, 25);
+//calculatePizzaGain(24, 24);
 
 // Task 2
 
