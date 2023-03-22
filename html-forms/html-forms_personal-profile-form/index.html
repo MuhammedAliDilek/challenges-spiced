@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <h2 id="title">Personal Website</h2>
+  <form aria-labelledby="title">
+    <h3>We want to get to know you! Please enter your personal information.</h3>
+    <fieldset>
+      <legend>Personal information</legend>
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        placeholder="Type your name"
+        required
+      />
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        name="lname"
+        id="lname"
+        placeholder="Type your Surname"
+        required
+      />
+      <label for="birthday"></label>Your Birthday</label>
+      <input type="date" name="birthday" id="birthday" />
+    </fieldset>
+    <h4>Can you tell us a little bit more? We want to annoy you with unwated ads</h4>
+    <fieldset>
+      <legend>Further information</legend>
+      <label for="color" name="color" id="color" >Favourite color</label>
+      <input type="color" name="color" id="color" value="#292599">
+
+      <label for="pet">What is your favourite pet?</label>
+      <select name="pet" id="pet">
+        <option value=""> --Please choose an option-- </option>  /*you cant make a placeholder "please choose an option" and disabled it at the same time */
+        <option value="wolf">wolf</option>
+        <option value="lion">lion</option>
+        <option value="panda">panda</option></select>
+
+
+
+    </fieldset>
+    <button type="submit">Submit</button>
+  </form>
+
+  <body>
+    <section></section>
+  </body>
+</html>
