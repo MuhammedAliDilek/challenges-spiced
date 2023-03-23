@@ -18,3 +18,10 @@ const uppercaseButton = document.querySelector('[data-js="button-uppercase"]');
 uppercaseButton.addEventListener("click", () => {
   input.value = input.value.toUpperCase();
 });
+
+//const input = document.querySelector('[data-js="second-input"]'); This is unnecesary we already have a input.
+const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
+
+lowercaseButton.addEventListener("click", () => {
+  input.value = input.value.toLowerCase();
+});
