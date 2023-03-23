@@ -19,8 +19,20 @@ const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
 
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
+  secondInput.value = secondInput.value.toUpperCase();
 });
 
 lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
+  secondInput.value = secondInput.value.toLowerCase();
+});
+
+const secondInput = document.querySelector('[data-js="second-input"]');
+const switchButton = document.querySelector('[data-js="button-switch"]');
+
+switchButton.addEventListener("click", () => {
+  // the order of the process is really important here
+  let holder = firstInput.value;
+  firstInput.value = secondInput.value;
+  secondInput.value = holder;
 });
