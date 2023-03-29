@@ -5,3 +5,9 @@ function handleUserLogin(onSuccess) {
 }
 
 // The exercise starts here!
+function showWelcomeMessage(userName) {
+  console.log(`Welcome ${userName} You are logged in now.`);
+}
+handleUserLogin(function () {
+  showWelcomeMessage("Jane Doe");
+});
