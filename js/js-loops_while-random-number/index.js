@@ -6,11 +6,12 @@ let number = 0;
 let count = 0;
 
 // --v-- write/change code here --v--
-while (string.length <= 8) {
-  console.log(string);
-  string = string + string;
-}
 
+while (number <= 0.9) {
+  count++;
+  console.log(number);
+  number = Math.random(); // that generate a random number
+}
 // --^-- write/change code here --^--
 
 console.log(
