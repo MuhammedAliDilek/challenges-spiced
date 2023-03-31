@@ -1,5 +1,3 @@
-console.clear();
-
 const animalStrings = [
   "cat",
   "dog",
@@ -21,15 +19,21 @@ const animalStrings = [
   "rhino",
 ];
 
-const hippoExists = null;
+const hippoExists = animalStrings.includes("hippo"); //true
 
 // Hint: You can pass the starting index as second parameter.
-const catStartingFromIndexFiveExists = null;
+const catStartingFromIndexFiveExists = animalStrings.includes("cat", 5); //index five means the order five. Cat is in the 1 first place so it is index 1
+const catStartingFromIndexFiveExistss = animalStrings.slice(5).length > 0; //AnimalString is a array
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterP = null;
+//const firstAnimalStartingWithLetterP = null;
+const firstAnimalStartingWithLetterP = animalStrings.find((animal) =>
+  animal.startsWith("p")
+);
 
-const indexOfGiraffe = null;
+const indexOfGiraffe = animalStrings.findIndex((animal) =>
+  animal.startsWith("g")
+);
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
@@ -39,12 +43,14 @@ const indexOfGiraffe = null;
 // Hint: There is no need to upper-/lowercase the strings before sorting them.
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy.
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animalStrings.slice().sort();
 
 // Hint: Guess what? There is a string method called `endsWith()`.
-const anyAnimalEndsWithLetterZ = null;
+const anyAnimalEndsWithLetterZ = animalStrings.some().endsWith("z"); //
 
-const everyAnimalHasMoreThanTwoLetters = null;
+const everyAnimalHasMoreThanTwoLetters = animalStrings.every(
+  (animal) => animal.length > 2
+);
 
 // Hint: There are several ways to go here. Let's focus on two options:
 // Option 1: Concatenate all characters with `reduce()` and check for the `length` property of the result.
