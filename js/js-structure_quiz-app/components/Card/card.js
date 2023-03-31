@@ -1,4 +1,4 @@
-import { Bookmark } from "./components/Bookmark/bookmark.js";
+import { Bookmark } from "../Bookmark/bookmark.js";
 import { cards } from "../../utils/Cardz.js";
 
 export function Card(props) {
