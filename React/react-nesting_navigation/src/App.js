@@ -1,34 +1,23 @@
 import "./styles.css";
 
-import avatar from "./img/avatar.jpg";
-import logo from "./img/logo.jpg";
+import Header from "./Components/Header";
+import Navigation from "./Components/Navigation";
+import Link from "./Components/Link";
+import Logo from "./Components/Logo";
+import Avatar from "./Components/Avatar";
 
 export default function App() {
   return (
     <>
-      <header className="header">
-        <a href="#">
-          <img className="round-image" src={logo} alt="logo" />
-        </a>
-        <nav>
-          <a className="navigation__link" href="#home">
-            Home
-          </a>
-          <a className="navigation__link" href="#about">
-            About
-          </a>
-          <a className="navigation__link" href="#impressum">
-            Impressum
-          </a>
-        </nav>
-        <button
-          type="button"
-          onClick={() => console.log("I could toggle a profile!")}
-          aria-label="toggle profile"
-        >
-          <img className="round-image" src={avatar} alt="avatar" />
-        </button>
-      </header>
+      <Header>
+      <Logo />
+        <Navigation>
+          <Link navigationLink="#home">Home</Link>
+          <Link navigationLink="#about">About</Link>
+          <Link navigationLink="#impressum">Impressum</Link>
+        </Navigation>
+        <Avatar />
+      </Header>
       <main>content goes here…</main>
     </>
   );
