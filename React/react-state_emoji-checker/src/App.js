@@ -1,8 +1,9 @@
+import { useState } from "react";
 import React from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
+  const [code, handleClick] = useState("?");
 
   const validCode = "🐡🐠🐋";
 
@@ -11,7 +12,7 @@ export default function App() {
       <div className="button-container">
         <button
           type="button"
-          onClick={() => {
+          onClick={() => { handleClick (code  + "🐡")
             console.log("Update Code!");
           }}
         >
@@ -21,7 +22,7 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {
+          onClick={() => { handleClick (code + "🐋")
             console.log("Update Code!");
           }}
         >
@@ -31,7 +32,7 @@ export default function App() {
         </button>
         <button
           type="button"
-          onClick={() => {
+          onClick={() => { handleClick (code + "🐠")
             console.log("Update Code!");
           }}
         >
@@ -43,7 +44,7 @@ export default function App() {
 
       <button
         type="button"
-        onClick={() => {
+        onClick={() => {handleClick ("")
           console.log("Reset Code!");
         }}
       >
