@@ -1,4 +1,4 @@
-export const USERS = [
+export const USERS = [  //this is the array
   {
     id: 0,
     name: "Herman Webb",
