@@ -9,7 +9,7 @@ export default function App() {
     setTags([...tags, newTag])}
 
   function handleDeleteTag(tagToDelete) {
-  const newTags = tags.filter(tag => tag !== tagToDelete);
+  const newTags = tags.filter((tag) => tag !== tagToDelete);
   setTags(newTags);
   }
 
