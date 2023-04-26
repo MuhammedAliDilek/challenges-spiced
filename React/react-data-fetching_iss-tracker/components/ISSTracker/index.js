@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react";
 import Controls from "../Controls/index";
 import Map from "../Map/index";
 import useSWR, { useSWRConfig } from "swr";
@@ -28,6 +28,55 @@ export default function ISSTracker() {
   }
 
   if (isLoading) return <div>loading...</div>;
+
+  if (error) return <div>failed to load</div>;
+
+  if (data) {
+    const { latitude, longitude } = data;
+    return (
+      <main>
+        <Map longitude={longitude} latitude={latitude} />
+        <Controls
+          longitude={longitude}
+          latitude={latitude}
+          onRefresh={handleRefresh}
+        />
+      </main>
+    );
+  }
+}
+ */
+//-----------------------------------------------------
+//SWR used below here
+
+import Controls from "../Controls/index";
+import Map from "../Map/index";
+import useSWR, { useSWRConfig } from "swr";
+
+const URL = "https://api.wheretheiss.at/v1/satellites/25544";
+
+export default function ISSTracker() {
+  const { data, error, isValidating, mutate } = useSWR(URL, {
+    fetcher: async (url) => {
+      const res = await fetch(url);
+
+      if (!res.ok) {
+        const error = new Error("An error occurred while fetching the data.");
+        error.info = await res.json();
+        error.status = res.status;
+        throw error;
+      }
+
+      return res.json();
+    },
+    refreshInterval: 5000,
+  });
+
+  function handleRefresh() {
+    mutate();
+  }
+
+  if (isValidating) return <div>loading...</div>;
 
   if (error) return <div>failed to load</div>;
 
